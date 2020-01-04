@@ -1,0 +1,30 @@
+.uls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+}
+
+.ul_li {
+  width: 28px;
+  height: 28px;
+}
+
+.linka {
+  width: 28px;
+  height: 28px;
+  background-size: 28px 28px;
+  display: inline-block;
+}
+
+.my {
+  background-image: url(./../../assets/tab/my.svg);
+}
+
+.hong {
+  background-image: url(./../../assets/tab/hong.svg);
+}
+
+.find {
+  background-image: url(./../../assets/tab/find.svg);
+}
