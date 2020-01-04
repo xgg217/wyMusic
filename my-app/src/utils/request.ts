@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const service = axios.create({
-  baseURL: ' http://localhost:4000', // api的base_url
+  baseURL: ' http://localhost:3000', // api的base_url
   timeout: 15000 // 请求超时时间
 });
 
