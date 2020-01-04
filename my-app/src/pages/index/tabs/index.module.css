@@ -1,0 +1,24 @@
+.warpp {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* border: 1px solid red; */
+  height: 100%;
+}
+
+.lis {
+  display: flex;
+  flex-direction: column;
+}
+
+.lis i {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid red;
+  margin-bottom: 5px;
+}
+
+.lis p {
+  font-size: 12px;
+}
