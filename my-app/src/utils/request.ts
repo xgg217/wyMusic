@@ -64,7 +64,7 @@ service.interceptors.response.use(
     removePending(response.config);
     // 获取返回数据，并处理。按自己业务需求修改。下面只是个demo
     const res = response.data;
-    console.log(res)
+    // console.log(res)
     if (res.code !== 200) {
       Toast.fail('错误！！！，返回非200')
         // if (res.code === 401) {

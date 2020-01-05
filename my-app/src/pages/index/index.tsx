@@ -4,7 +4,7 @@ import styles from './index.module.css';
 
 const Card = lazy(() => import('compontes/card'));
 const Tabs = lazy(() => import('./tabs'));
-const Recommend = lazy(() => import('./recommend'));
+const MusicList = lazy(() => import('./music-list'));
 
 
 const Index: React.FC = () => {
@@ -19,7 +19,12 @@ const Index: React.FC = () => {
         </section>
 
         {/* 推荐歌单 */}
-        <Recommend></Recommend>
+        <section className={ styles['music_list'] }>
+          <MusicList>
+            <h5>推荐音乐</h5>
+          </MusicList>
+        </section>
+        
       </div>
     </Suspense>
     

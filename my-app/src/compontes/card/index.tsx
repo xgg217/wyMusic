@@ -14,13 +14,12 @@ interface Banners {
 
 const Index: React.FC = () => {
   const [imgList, setImgList] = useState<Banners[]>([]);
-  const [imgHeight , setImgHeight ] = useState('140')
+  const [ , setImgHeight ] = useState('140')
 
   // 轮播图
   useEffect(() => {
     (async () => {
       const res = await getBanner();
-
       setImgList(res.data.banners);
     })();
   },[]);
@@ -40,7 +39,7 @@ const Index: React.FC = () => {
       </div>
     )
   })
-  console.log(cardImgList)
+  // console.log(cardImgList)
 
   return (
     <div className={ styles.warpp }>
