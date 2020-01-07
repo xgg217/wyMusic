@@ -1,0 +1,28 @@
+.lis {
+  border: 1px solid red;
+  border-radius: 4px;
+  width: 100px;
+  height: 140px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.imgs {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #000;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+p {
+  text-align: left;
+  /* font-weight: bold; */
+}

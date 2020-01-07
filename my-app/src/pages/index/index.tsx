@@ -20,9 +20,7 @@ const Index: React.FC = () => {
 
         {/* 推荐歌单 */}
         <section className={ styles['music_list'] }>
-          <MusicList>
-            <h5>推荐音乐</h5>
-          </MusicList>
+          <MusicList title="推荐音乐"></MusicList>
         </section>
         
       </div>
