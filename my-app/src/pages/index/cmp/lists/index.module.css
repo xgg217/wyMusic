@@ -1,5 +1,8 @@
 .lis {
-  border: 1px solid red;
+  position: relative;
+  top: 0;
+  left: 0;
+  /* border: 1px solid red; */
   border-radius: 4px;
   width: 100px;
   height: 140px;
@@ -14,7 +17,7 @@
   height: 100px;
   border-radius: 4px;
   overflow: hidden;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 
 img {
@@ -25,4 +28,29 @@ img {
 p {
   text-align: left;
   /* font-weight: bold; */
+}
+
+.txt {
+  /* border: 1px solid #000; */
+  height: 28px;
+  overflow: hidden;
+}
+
+.play_count {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+}
+.play_count i {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  /* border: 1px solid red; */
+}
+
+.play_count p {
+  color: #fff;
+  font-size: 12px;
 }

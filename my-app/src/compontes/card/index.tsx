@@ -20,7 +20,7 @@ const Index: React.FC = () => {
   useEffect(() => {
     (async () => {
       const res = await getBanner();
-      setImgList(res.data.banners);
+      setImgList(res.banners);
     })();
   },[]);
 
