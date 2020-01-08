@@ -5,7 +5,7 @@ import styles from './index.module.css';
 const Card = lazy(() => import('compontes/card'));
 const Tabs = lazy(() => import('./tabs'));
 const MusicList = lazy(() => import('./music-list'));
-
+const NewMusic = lazy(() => import('./new-music'));
 
 const Index: React.FC = () => {
   return (
@@ -21,6 +21,8 @@ const Index: React.FC = () => {
         {/* 推荐歌单 */}
         <section className={ styles['music_list'] }>
           <MusicList title="推荐音乐"></MusicList>
+
+          <NewMusic title="新歌"></NewMusic>
         </section>
         
       </div>

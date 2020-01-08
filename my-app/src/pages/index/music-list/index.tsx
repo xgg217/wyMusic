@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import Lists from './../cmp/lists'
+import Lists from 'pages/index/cmp/lists-cmp'
 
 import styles from './index.module.css';
 

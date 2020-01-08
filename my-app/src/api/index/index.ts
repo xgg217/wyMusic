@@ -26,7 +26,18 @@ const getPersonalized = (val:number = 6) => {
   }).then(res => res.data)
 }
 
+/**
+ * 推荐新音乐
+ */
+const getNewsong = () => {
+  return request({
+    url: "/personalized/newsong",
+    method:"get"
+  }).then(res => res.data)
+}
+
 export {
   getBanner,
-  getPersonalized
+  getPersonalized,
+  getNewsong
 }
