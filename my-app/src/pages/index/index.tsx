@@ -24,7 +24,6 @@ const Index: React.FC = () => {
 
           <NewMusic title="新歌"></NewMusic>
         </section>
-        
       </div>
     </Suspense>
     

@@ -12,6 +12,7 @@ import Tabs from 'compontes/tabs';
 import Index from 'pages/index';
 import My from 'pages/my';
 import Find from 'pages/find';
+import Footer from 'pages/footer'
 
 
 
@@ -31,6 +32,9 @@ const App: React.FC = () => {
             <Redirect to='/'></Redirect>
           </Switch>
         </main>
+        <footer className="footer">
+          <Footer></Footer>
+        </footer>
       </div>
     </Router>
     

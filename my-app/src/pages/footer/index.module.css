@@ -1,0 +1,76 @@
+.warpp {
+  box-sizing: border-box;
+  padding: 0 10px 0 5px;
+  border: 1px solid red;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 0.9) border-box;   
+  /* filter:blur(1px); */
+}
+
+.imgs,
+.right div:first-child,
+.right div:last-child {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+
+.imgs {
+  width: 30px;
+  height: 30px;
+  border: 1px solid red;
+  margin-right: 5px;
+}
+.img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.content {
+  /* border: 1px solid #000; */
+  width: 80%;
+}
+
+.content h4,
+.content p {
+  text-align: left;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.content h4 {
+  font-weight: bold;
+  font-size: 15px;
+  /* border: 1px solid #000; */
+  
+}
+.content p {
+  font-size: 12px;
+  color: #777;
+}
+
+.right {
+  display: flex;
+
+}
+.right div:first-child {
+  width: 25px;
+  height: 25px;
+  /* border: 1px solid red; */
+  margin-right: 20px;
+}
+
+.right div:last-child {
+  width: 25px;
+  height: 25px;
+  /* border: 1px solid red; */
+}
