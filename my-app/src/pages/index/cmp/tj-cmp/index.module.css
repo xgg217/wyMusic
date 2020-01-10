@@ -1,0 +1,17 @@
+.titles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.titles h5 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.lists {
+  margin-top: 17px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: center; */
+}

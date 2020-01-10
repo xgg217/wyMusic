@@ -8,10 +8,10 @@ import {
   Route } from 'react-router-dom';
 
 const Ranking = lazy(() => import('pages/ranking')); // 排行榜
-const Tabs = lazy(() => import('compontes/tabs'));
-const My = lazy(() => import('pages/my'));
+
+
 const Index = lazy(() => import('pages/index'));
-const Find = lazy(() => import('pages/find'));
+// const Find = lazy(() => import('pages/find'));
 const Footer = lazy(() => import('pages/footer'));
 
 const App: React.FC = () => {
@@ -19,18 +19,18 @@ const App: React.FC = () => {
     <Router>
       <Suspense fallback={ null }>
         <div className="App">
-          <header>
+          {/* <header>
             <Tabs></Tabs>
-          </header>
+          </header> */}
 
           <main>
             <Switch>
-              <Route path='/' exact component={ Index }></Route>
+              {/* <Route path='/' exact component={ Index }></Route> */}
               <Route path='/index' component={ Index }></Route>
-              <Route path='/my' component={ My }></Route>
+              {/* <Route path='/my' component={ My }></Route> */}
               <Route path="/ranking" component={ Ranking }></Route>
-              <Route path='/find' component={ Find }></Route>
-              <Redirect to='/'></Redirect>
+              {/* <Route path='/find' component={ Find }></Route> */}
+              {/* <Redirect to='/index'></Redirect> */}
             </Switch>
           </main>
           <footer className="footer">

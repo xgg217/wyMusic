@@ -19,6 +19,7 @@
 
 .my {
   background-image: url(./../../assets/tab/my.svg);
+  /* background-image: url('assets/tab/my.svg'); */
 }
 
 .hong {

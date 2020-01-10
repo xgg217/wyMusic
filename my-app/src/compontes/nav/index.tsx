@@ -20,7 +20,7 @@ export default function index() {
     <ul className={ styles.uls }>
       <li className={ styles['ul_li'] }>
         <NavLink
-          to="/my"
+          to="/index/my"
           exact
           className={ `${styles.my} ${styles.linka}` }
           activeStyle={ { backgroundImage: bgc.myUrl } }>
@@ -28,7 +28,7 @@ export default function index() {
       </li>
       <li className={ styles['ul_li'] }>
         <NavLink
-          to="/"
+          to="/index/index"
           exact
           className={ `${styles.hong} ${styles.linka}` }
           activeStyle={ { backgroundImage: bgc.hongUrl } }
@@ -36,7 +36,7 @@ export default function index() {
       </li>
       <li className={ styles['ul_li'] }>
         <NavLink
-          to="/find"
+          to="/index/find"
           exact
           className={ `${styles.find} ${styles.linka}` }
           activeStyle={ { backgroundImage: bgc.findUrl } }
