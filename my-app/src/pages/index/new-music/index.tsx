@@ -43,7 +43,6 @@ const Index: React.FC<IProps> = ({ title }) => {
     }
     return arr;
   }
-  console.log(newMuiseList)
 
   return (
     <section>

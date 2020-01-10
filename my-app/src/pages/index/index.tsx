@@ -1,4 +1,5 @@
-import React, { Suspense, lazy } from 'react'
+import React, { useState, useEffect, Suspense, lazy } from 'react';
+import { Switch, Route, RouteComponentProps, withRouter, Redirect, Link } from 'react-router-dom';
 
 import styles from './index.module.css';
 
@@ -7,7 +8,22 @@ const Tabs = lazy(() => import('./tabs'));
 const MusicList = lazy(() => import('./music-list'));
 const NewMusic = lazy(() => import('./new-music'));
 
-const Index: React.FC = () => {
+// 二级路由
+
+
+interface IProps extends RouteComponentProps {
+}
+
+const Index: React.FC<IProps> = ({ match }) => {
+  const [urls, setUrls] = useState<string>('')
+  console.log(match.url)
+  
+
+  useEffect(() => {
+    setUrls(match.url); // 当前页面路由地址
+  }, []);
+
+
   return (
     <Suspense fallback={ null }>
       <div className={ styles.warpp }>
@@ -24,10 +40,11 @@ const Index: React.FC = () => {
 
           <NewMusic title="新歌"></NewMusic>
         </section>
+
       </div>
     </Suspense>
     
   )
 }
 
-export default Index
+export default withRouter(Index)

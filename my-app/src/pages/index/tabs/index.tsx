@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 
 import styles from './index.module.css';
 
@@ -8,8 +9,20 @@ import ranking from 'assets/index/ranking.svg';
 import radiostation from 'assets/index/radiostation.svg';
 import live from 'assets/index/live.svg';
 
+interface IProps extends RouteComponentProps {
 
-const Index: React.FC = () => {
+}
+
+const Index: React.FC<IProps> = ({ history, match }) => {
+
+  const goRanking = ():void => {
+    // console.log(history)
+    // console.log(match)
+    // history.push()
+    const newUrl = match.url;
+    history.push(`/ranking`);
+  }
+
   return (
     <ul className={ styles.warpp }>
       <li className={ styles.lis }>
@@ -24,7 +37,7 @@ const Index: React.FC = () => {
         </i>
         <p>歌单</p>
       </li>
-      <li  className={ styles.lis }>
+      <li className={ styles.lis } onClick={ goRanking }>
         <i className={ styles.imgs }>
           <img src={ ranking } alt=""/>
         </i>
@@ -46,4 +59,4 @@ const Index: React.FC = () => {
   )
 }
 
-export default Index
+export default withRouter(Index as any)

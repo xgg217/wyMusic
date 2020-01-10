@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import {
@@ -7,35 +7,38 @@ import {
   Redirect,
   Route } from 'react-router-dom';
 
-
-import Tabs from 'compontes/tabs';
-import Index from 'pages/index';
-import My from 'pages/my';
-import Find from 'pages/find';
-import Footer from 'pages/footer'
-
-
+const Ranking = lazy(() => import('pages/ranking')); // 排行榜
+const Tabs = lazy(() => import('compontes/tabs'));
+const My = lazy(() => import('pages/my'));
+const Index = lazy(() => import('pages/index'));
+const Find = lazy(() => import('pages/find'));
+const Footer = lazy(() => import('pages/footer'));
 
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="App">
-        <header>
-          <Tabs></Tabs>
-        </header>
+      <Suspense fallback={ null }>
+        <div className="App">
+          <header>
+            <Tabs></Tabs>
+          </header>
 
-        <main>
-          <Switch>
-            <Route path='/' exact component={ Index }></Route>
-            <Route path='/my' exact component={ My }></Route>
-            <Route path='/find' exact component={ Find }></Route>
-            <Redirect to='/'></Redirect>
-          </Switch>
-        </main>
-        <footer className="footer">
-          <Footer></Footer>
-        </footer>
-      </div>
+          <main>
+            <Switch>
+              <Route path='/' exact component={ Index }></Route>
+              <Route path='/index' component={ Index }></Route>
+              <Route path='/my' component={ My }></Route>
+              <Route path="/ranking" component={ Ranking }></Route>
+              <Route path='/find' component={ Find }></Route>
+              <Redirect to='/'></Redirect>
+            </Switch>
+          </main>
+          <footer className="footer">
+            <Footer></Footer>
+          </footer>
+        </div>
+      </Suspense>
+      
     </Router>
     
   );
