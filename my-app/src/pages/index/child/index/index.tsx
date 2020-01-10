@@ -3,8 +3,9 @@ import React, { useState, useEffect, Suspense, lazy } from 'react';
 import styles from './index.module.css';
 
 const Card = lazy(() => import('compontes/card'));
-const Tabs = lazy(() => import('pages/index/cmp/tabs-cmp'));
-const NewMusic = lazy(() => import('pages/index/cmp/tj-cmp'));
+const Tabs = lazy(() => import('./cmp/tabs-cmp'));
+// const NewMusic = lazy(() => import('pages/index/cmp/tj-cmp'));
+// const NewMusic = lazy(() => import('./cmp/tj-cmp'));
 
 const Index: React.FC =() => {
   return (
@@ -17,7 +18,7 @@ const Index: React.FC =() => {
           <Tabs></Tabs>
         </section>
 
-        <NewMusic title="新歌"></NewMusic>
+        {/* <NewMusic title="新歌"></NewMusic> */}
       </section>
     </Suspense>
   )

@@ -30,7 +30,7 @@ const App: React.FC = () => {
               {/* <Route path='/my' component={ My }></Route> */}
               <Route path="/ranking" component={ Ranking }></Route>
               {/* <Route path='/find' component={ Find }></Route> */}
-              {/* <Redirect to='/index'></Redirect> */}
+              <Redirect to='/index/index'></Redirect>
             </Switch>
           </main>
           <footer className="footer">

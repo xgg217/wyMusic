@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import Lists from 'pages/index/cmp/lists-cmp'
+import Lists from './../lists-cmp'
 
 import styles from './index.module.css';
 
@@ -43,7 +43,7 @@ const Index: React.FC<IProps> = ({ title }) => {
   })
 
   return (
-    <section>
+    <section className={ styles.warpp }>
       <div className={ styles.titles }>
         <h5> { title } </h5>
         <p></p>

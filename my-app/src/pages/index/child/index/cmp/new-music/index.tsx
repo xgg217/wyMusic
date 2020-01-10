@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import NewMusicCmp from 'pages/index/cmp/new-music-cmp'
+// import NewMusicCmp from 'pages/index/cmp/new-music-cmp'
+import NewMusicCmp from './../new-music-cmp'
 import styles from './index.module.css';
 
 import { getNewsong } from 'api/index/index'
@@ -36,6 +37,7 @@ const Index: React.FC<IProps> = ({ title }) => {
     for(let i = 0; i < len; i++) {
       if(i <= 2) {
         const element = <NewMusicCmp key={ muiseList[i].id } ids={ muiseList[i].id } title={ muiseList[i].name } imgUrl={ muiseList[i].picUrl }></NewMusicCmp>
+        // const element = 1
         arr.push(element);
       } else {
         break;

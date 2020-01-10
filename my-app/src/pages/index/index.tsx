@@ -5,9 +5,9 @@ import styles from './index.module.css';
 
 
 
-const MusicList = lazy(() => import('./music-list'));
+// const MusicList = lazy(() => import('./music-list'));
 
-const Nau = lazy(() => import('compontes/tabs'));
+// const Nau = lazy(() => import('compontes/tabs'));
 
 
 
@@ -34,22 +34,8 @@ const Index: React.FC<IProps> = ({ match }) => {
     <Suspense fallback={ null }>
       <div className={ styles.warpp }>
         <header>
-          <Nau></Nau>
+          {/* <Nau></Nau> */}
         </header>
-
-        {/* 轮播图 */}
-        {/* <Card></Card> */}
-
-        {/* <section className={ styles.tabs }>
-          <Tabs></Tabs>
-        </section> */}
-
-        {/* 推荐歌单 */}
-        {/* <section className={ styles['music_list'] }>
-          <MusicList title="推荐音乐"></MusicList>
-
-          <NewMusic title="新歌"></NewMusic>
-        </section> */}
 
         <Switch>
           <Route path='/index/index' component={ ChildIndex }></Route>
