@@ -32,6 +32,7 @@ interface SongsItem {
 const Index: React.FC<IProps> = ({ titles }) => {
   const [lists, setLists] = useState<Lists[]>([]);
 
+  // 所有榜单内容摘要
   useEffect(() => {
     (async () => {
       const res = await gettToplistTetail();
@@ -95,7 +96,7 @@ const Index: React.FC<IProps> = ({ titles }) => {
       // 最多6个
       setLists(arr);
     })();
-  }, [])
+  }, []);
 
   const listContent = lists.map(item => {
     return (

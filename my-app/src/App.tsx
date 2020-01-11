@@ -7,6 +7,7 @@ import {
   Route } from 'react-router-dom';
 
 const Ranking = lazy(() => import('pages/ranking')); // 排行榜
+const MusicList = lazy(() => import('pages/music-list')); // 榜单列表
 
 
 const Index = lazy(() => import('pages/index'));
@@ -18,11 +19,11 @@ const App: React.FC = () => {
     <Router>
       <Suspense fallback={ null }>
         <div className="App">
-
           <main>
             <Switch>
               <Route path='/index' component={ Index }></Route>
               <Route path="/ranking" component={ Ranking }></Route>
+              <Route path="/list:idx" component={ MusicList }></Route>
               {/* <Route path='/find' component={ Find }></Route> */}
               <Redirect to='/index/index'></Redirect>
             </Switch>

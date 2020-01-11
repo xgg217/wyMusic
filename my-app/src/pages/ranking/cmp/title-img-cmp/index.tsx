@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './index.module.css';
 
 interface IProps {
+  idx?:number
   imgUrl:string
   updateFrequency:string
 }
