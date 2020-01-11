@@ -47,7 +47,7 @@ const Index: React.FC<IProps> = ({ title }) => {
   }
 
   return (
-    <section>
+    <section className={ styles.warpp }>
       <div className={ styles.titles }>
         <h5> { title } </h5>
         <p></p>

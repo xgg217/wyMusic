@@ -3,13 +3,8 @@ import { Switch, Route, RouteComponentProps, withRouter, Redirect, Link } from '
 
 import styles from './index.module.css';
 
-
-
-// const MusicList = lazy(() => import('./music-list'));
-
-// const Nau = lazy(() => import('compontes/tabs'));
-
-
+// 导航栏
+const Nav = lazy(() => import('compontes/tabs'));
 
 // 二级路由
 const ChildIndex = lazy(() => import('./child/index'));
@@ -23,18 +18,12 @@ interface IProps extends RouteComponentProps {
 const Index: React.FC<IProps> = ({ match }) => {
   const [urls, setUrls] = useState<string>('')
   console.log(match.url)
-  
-
-  // useEffect(() => {
-  //   setUrls(match.url); // 当前页面路由地址
-  // }, []);
-
 
   return (
     <Suspense fallback={ null }>
       <div className={ styles.warpp }>
         <header>
-          {/* <Nau></Nau> */}
+          <Nav></Nav>
         </header>
 
         <Switch>

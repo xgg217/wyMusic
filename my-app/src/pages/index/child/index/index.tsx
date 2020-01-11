@@ -5,7 +5,8 @@ import styles from './index.module.css';
 const Card = lazy(() => import('compontes/card'));
 const Tabs = lazy(() => import('./cmp/tabs-cmp'));
 // const NewMusic = lazy(() => import('pages/index/cmp/tj-cmp'));
-// const NewMusic = lazy(() => import('./cmp/tj-cmp'));
+const NewMusic = lazy(() => import('./cmp/tj-cmp'));
+const GcMusic = lazy(() => import('./cmp/new-music'));
 
 const Index: React.FC =() => {
   return (
@@ -18,7 +19,11 @@ const Index: React.FC =() => {
           <Tabs></Tabs>
         </section>
 
-        {/* <NewMusic title="新歌"></NewMusic> */}
+        <NewMusic title="新歌"></NewMusic>
+
+        <GcMusic title="广场"></GcMusic>
+
+
       </section>
     </Suspense>
   )
