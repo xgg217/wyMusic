@@ -1,0 +1,23 @@
+.warpp {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.uls {
+  margin-left: 10px;
+  /* border: 1px solid #000; */
+  height: 80%;
+  width: 67.9%;
+}
+
+.uls li {
+  text-align: left;
+  line-height: 28px;
+  color: #686868;
+  width: 100%;
+  /* border: 1px solid #000; */
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}

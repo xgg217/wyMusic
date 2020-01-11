@@ -1,0 +1,12 @@
+.imgs {
+  width: 95px;
+  height: 95px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+}
