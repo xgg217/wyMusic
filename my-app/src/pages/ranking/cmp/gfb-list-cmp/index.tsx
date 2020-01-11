@@ -13,13 +13,15 @@ interface IProps {
 interface Tracks {
   first:string
   second:string
+  id:number
 }
 
 const Index: React.FC<IProps> = ({ id, tracks, updateFrequency, coverImgUrl, }) => {
 
   const tracksArr = tracks.map((item, index) => {
+    // console.log(item)
     return (
-      <li key={ index }>
+      <li key={ item.id }>
         {index + 1} { item.first }- { item.second }
       </li>
     )
@@ -29,9 +31,6 @@ const Index: React.FC<IProps> = ({ id, tracks, updateFrequency, coverImgUrl, }) 
     <li className={ styles.warpp }>
       <TitleImg imgUrl={ coverImgUrl } updateFrequency={ updateFrequency }></TitleImg>
       <ul className={ styles.uls }>
-        {/* <li></li>
-        <li></li>
-        <li></li> */}
         { tracksArr.length && tracksArr }
       </ul>
     </li>

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from './index.module.css';
-import listimg from 'assets/footer/list.svg';
+// import listimg from 'assets/footer/list.svg';
 import palyimg from 'assets/footer/paly.svg';
 import ztimg from 'assets/footer/zt.svg';
 

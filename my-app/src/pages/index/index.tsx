@@ -1,5 +1,5 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { Switch, Route, RouteComponentProps, withRouter, Redirect, Link } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
+import { Switch, Route, RouteComponentProps, withRouter, Redirect } from 'react-router-dom';
 
 import styles from './index.module.css';
 
@@ -16,8 +16,8 @@ interface IProps extends RouteComponentProps {
 }
 
 const Index: React.FC<IProps> = ({ match }) => {
-  const [urls, setUrls] = useState<string>('')
-  console.log(match.url)
+  // const [urls, setUrls] = useState<string>('')
+  // console.log(match.url)
 
   return (
     <Suspense fallback={ null }>

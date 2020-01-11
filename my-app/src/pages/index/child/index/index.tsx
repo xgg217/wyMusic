@@ -1,10 +1,9 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react';
 
 import styles from './index.module.css';
 
 const Card = lazy(() => import('compontes/card'));
 const Tabs = lazy(() => import('./cmp/tabs-cmp'));
-// const NewMusic = lazy(() => import('pages/index/cmp/tj-cmp'));
 const NewMusic = lazy(() => import('./cmp/tj-cmp'));
 const GcMusic = lazy(() => import('./cmp/new-music'));
 

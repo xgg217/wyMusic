@@ -5,7 +5,7 @@ import { List } from 'antd-mobile';
 import add from 'assets/footer/add.svg'
 import newplay from 'assets/footer/newplay.svg'
 
-import styles from './index.module.css';
+// import styles from './index.module.css';
 
 const Item = List.Item;
 

@@ -16,10 +16,6 @@ interface IProps extends RouteComponentProps {
 const Index: React.FC<IProps> = ({ history, match }) => {
 
   const goRanking = ():void => {
-    // console.log(history)
-    // console.log(match)
-    // history.push()
-    const newUrl = match.url;
     history.push(`/ranking`);
   }
 

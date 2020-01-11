@@ -7,11 +7,11 @@ interface IProps {
   updateFrequency:string
 }
 
-const Index: React.FC<IProps> = () => {
-
+const Index: React.FC<IProps> = ({ imgUrl, updateFrequency }) => {
   return (
     <div className={ styles.imgs }>
-      <img className={ styles.img } src="http://t8.baidu.com/it/u=1484500186,1503043093&fm=79&app=86&f=JPEG?w=1280&h=853" alt=""/>
+      <img className={ styles.img } src={ imgUrl } alt=""/>
+      <p>{ updateFrequency }</p>
     </div>
   )
 }
