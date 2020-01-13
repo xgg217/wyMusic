@@ -1,5 +1,13 @@
-
+.warpp {
+  box-sizing: border-box;
+}
 .phb {
   padding: 15px;
   background-color: #fff;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+.navs {
+  box-sizing: border-box;
 }

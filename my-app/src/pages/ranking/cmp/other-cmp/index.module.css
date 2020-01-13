@@ -5,8 +5,10 @@
 }
 
 .lis {
+  display: flex;
+  justify-content: center;
   box-sizing: border-box;
-  width: 33%;
+  width: 32%;
   /* border: 1px solid red; */
   margin-bottom: 10px;
 }

@@ -3,6 +3,8 @@ import { Switch, Route, RouteComponentProps, withRouter, Redirect } from 'react-
 
 import styles from './index.module.css';
 
+import useScrollTop from 'compontes/useScrollTop';
+
 // 导航栏
 const Nav = lazy(() => import('compontes/tabs'));
 
@@ -11,13 +13,13 @@ const ChildIndex = lazy(() => import('./child/index'));
 const ChildMy = lazy(() => import('./child/my'));
 const ChildFind = lazy(() => import('./child/find'));
 
-
 interface IProps extends RouteComponentProps {
 }
 
-const Index: React.FC<IProps> = ({ match }) => {
+const Index: React.FC<IProps> = ({ match, location }) => {
   // const [urls, setUrls] = useState<string>('')
   // console.log(match.url)
+  useScrollTop(location.pathname);
 
   return (
     <Suspense fallback={ null }>

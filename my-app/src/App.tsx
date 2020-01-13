@@ -9,7 +9,6 @@ import {
 const Ranking = lazy(() => import('pages/ranking')); // 排行榜
 const MusicList = lazy(() => import('pages/music-list')); // 榜单列表
 
-
 const Index = lazy(() => import('pages/index'));
 // const Find = lazy(() => import('pages/find'));
 const Footer = lazy(() => import('pages/footer'));
@@ -28,9 +27,9 @@ const App: React.FC = () => {
               <Redirect to='/index/index'></Redirect>
             </Switch>
           </main>
-          <footer className="footer">
-            <Footer></Footer>
-          </footer>
+          {/* <footer className="footer"> */}
+            {/* <Footer></Footer> */}
+          {/* </footer> */}
         </div>
       </Suspense>
     </Router>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { NavBar, Icon } from 'antd-mobile';
 
 
@@ -6,20 +7,33 @@ import GfbCmp from './cmp/gfb-cmp';
 import OtherCmp from './cmp/other-cmp';
 
 // import { getToplist } from 'api/rankin/rankin'
+import useScrollTop from 'compontes/useScrollTop';
 
 import styles from './index.module.css';
 
+interface IProps extends RouteComponentProps {}
 
 
-const Index: React.FC = () => {
+const Index: React.FC<IProps> = ({ history, location }) => {
+
+
+  useScrollTop(location.pathname);
+
+  // 返回上一页
+  const goNextPage = () => {
+    history.goBack();
+  };
 
 
   return (
     <section className={ styles.warpp }>
-      <NavBar
-        mode="light"
-        icon={<Icon type="left" />}
-        onLeftClick={() => console.log('onLeftClick')}>排行榜</NavBar>
+      <div className={ styles.navs }>
+        <NavBar
+          mode="light"
+          icon={<Icon type="left" />}
+          onLeftClick={ goNextPage }>排行榜</NavBar>
+      </div>
+     
       
       
       <div className={ styles.phb }>
@@ -36,4 +50,4 @@ const Index: React.FC = () => {
   )
 }
 
-export default Index
+export default withRouter(Index as any)
