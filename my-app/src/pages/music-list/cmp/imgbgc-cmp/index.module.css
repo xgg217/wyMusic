@@ -2,7 +2,7 @@
   position: relative;
   top: 0;
   left: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 280px;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -24,17 +24,26 @@
 }
 
 .rname p {
+  position: relative;
+  top: 0;
+  left: 0;
   text-align: left;
   font-size: 24px;
   margin-bottom: 5px;
+  /* border: 1px solid red; */
 }
 
 .rname i {
   position: absolute;
-  top: 25%;
-  right: 0;
+  bottom: 0;
+  right: -20px;
   display: inline-block;
   width: 16px;
   height: 16px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+.rname i img {
+  /* margin-top: -5px; */
+  max-width: 100%;
+  max-height: 100%;
 }

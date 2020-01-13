@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { NavBar, Icon } from 'antd-mobile';
 
+import Tsf from 'assets/music-list/ts.svg';
+
 import styles from './index.module.css';
 import useScrollTop from 'compontes/useScrollTop';
 
@@ -22,8 +24,6 @@ interface IParams {
 
 const Index: React.FC<IProps > = ({ history, location, match }) => {
   const [titleanme, setTitleanme] = useState<string>('')
-
-
 
   // 滚动条复原
   useScrollTop(location.pathname);
@@ -57,9 +57,12 @@ const Index: React.FC<IProps > = ({ history, location, match }) => {
 
       {/* 榜单名称 */}
       <div className={ styles.rname }>
-        <p>飙升榜</p>
+        <p>飙升榜
+          <i>
+            <img src={ Tsf } alt=""/>
+          </i>
+        </p>
         <span>最近更新：1月13日</span>
-        <i></i>
       </div>
 
       {/* 评论 分享 下载 多选 */}

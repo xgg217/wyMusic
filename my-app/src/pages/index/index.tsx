@@ -17,8 +17,6 @@ interface IProps extends RouteComponentProps {
 }
 
 const Index: React.FC<IProps> = ({ match, location }) => {
-  // const [urls, setUrls] = useState<string>('')
-  // console.log(match.url)
   useScrollTop(location.pathname);
 
   return (
