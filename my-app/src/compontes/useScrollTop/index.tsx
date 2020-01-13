@@ -11,7 +11,8 @@ const Index = (pagtanme:string):void => {
   useEffect(() => {
     const root = document.querySelector("#root");
     if(root) {
-      root.scrollIntoView();
+      // root.scrollIntoView();
+      window.scrollTo(0, 0);
     }
   }, [pagtanme])
 }

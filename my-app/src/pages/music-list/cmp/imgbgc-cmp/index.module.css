@@ -1,0 +1,40 @@
+.warpper {
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 1px solid red;
+  height: 280px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.uls {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+}
+
+.rname {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: #f6f6f7;
+}
+
+.rname p {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.rname i {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid red;
+}

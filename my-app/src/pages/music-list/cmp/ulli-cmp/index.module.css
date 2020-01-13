@@ -1,0 +1,26 @@
+.warpper {
+  display: flex;
+  /* border: 1px solid blue; */
+  width: 100%;
+}
+.warpper li {
+  width: 25%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.warpper li i {
+  width: 20px;
+  height: 20px;
+}
+
+.warpper li i img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.warpper li p {
+  margin-top: 5px;
+  color: #f6f6f7;
+}

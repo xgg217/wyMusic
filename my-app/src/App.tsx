@@ -22,14 +22,14 @@ const App: React.FC = () => {
             <Switch>
               <Route path='/index' component={ Index }></Route>
               <Route path="/ranking" component={ Ranking }></Route>
-              <Route path="/list:idx" component={ MusicList }></Route>
+              <Route path="/list/:id" component={ MusicList }></Route>
               {/* <Route path='/find' component={ Find }></Route> */}
               <Redirect to='/index/index'></Redirect>
             </Switch>
           </main>
-          {/* <footer className="footer"> */}
-            {/* <Footer></Footer> */}
-          {/* </footer> */}
+          <footer className="footer">
+            <Footer></Footer>
+          </footer>
         </div>
       </Suspense>
     </Router>

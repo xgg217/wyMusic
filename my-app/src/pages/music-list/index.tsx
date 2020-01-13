@@ -1,16 +1,19 @@
 import React from 'react';
+import HeadImgCmp from './cmp/imgbgc-cmp';
 
-import styles from './index.module.css';
+// import styles from './index.module.css';
 
 interface IProps {
 }
 
 const Index: React.FC<IProps> = () => {
-  // const [urls, setUrls] = useState<string>('')
-  // console.log(match.url)
 
   return (
-    <div>111</div>
+    <section>
+      <HeadImgCmp></HeadImgCmp>
+
+
+    </section>
     
   )
 }

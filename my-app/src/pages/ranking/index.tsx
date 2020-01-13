@@ -3,7 +3,7 @@ import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { NavBar, Icon } from 'antd-mobile';
 
 
-import GfbCmp from './cmp/gfb-cmp';
+// import GfbCmp from './cmp/gfb-cmp';
 import OtherCmp from './cmp/other-cmp';
 
 // import { getToplist } from 'api/rankin/rankin'

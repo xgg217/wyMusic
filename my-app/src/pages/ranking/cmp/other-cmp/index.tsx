@@ -7,7 +7,7 @@ import Titles from 'compontes/titles';
 
 import TitleImg from './../title-img-cmp'
 
-import { getToplist, gettToplistTetail } from 'api/rankin/rankin';
+import { gettToplistTetail } from 'api/rankin/rankin';
 
 interface IProps extends RouteComponentProps {
   titles:string
@@ -34,9 +34,9 @@ const Index: React.FC<IProps> = ({ titles, history }) => {
   }, []);
 
   // 跳转到路由榜单
-  const goMusicList = (index:number) => {
+  const goMusicList = (index:number):void => {
     console.log(index)
-    history.push(`/list:${index}`)
+    history.push(`/list/${index}`)
   }
 
   const imgLIst = imgArr.map((item:imgArr, index) => {
