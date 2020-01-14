@@ -10,6 +10,7 @@ import useScrollTop from 'compontes/useScrollTop';
 import UlsCmp from './../ulli-cmp';
 
 import { getList  } from 'api/lists/index';
+import { setData1  } from 'utils/fzm';
 
 interface IProps extends RouteComponentProps {
 }
@@ -23,7 +24,11 @@ interface IParams {
 }
 
 const Index: React.FC<IProps > = ({ history, location, match }) => {
-  const [titleanme, setTitleanme] = useState<string>('')
+  const [titleanme, setTitleanme] = useState<string>(''); // 标题
+  const [updataTime, setUpdataTime] = useState<string>(''); // 更新日期
+  const [coverImgUrl, setCoverImgUrl] = useState<string>(''); // 海报图片
+  const [shareCount, setShareCount] = useState<number>(0); // 分享次数
+  const [commentCount, setCommentCount] = useState<number>(0); // 评论次数
 
   // 滚动条复原
   useScrollTop(location.pathname);
@@ -32,11 +37,20 @@ const Index: React.FC<IProps > = ({ history, location, match }) => {
     (async () => {
       const obj:IParams = match.params;
       const res = await getList(obj.idx)
+
+      const data = res.playlist;
       
-      setTitleanme(res.playlist.name); // 标题
+      setTitleanme(data.name); // 标题
 
-
+      const updataTime = setData1(data.updateTime)
       console.log(res)
+      setUpdataTime(updataTime); // 更新日期
+
+      setCoverImgUrl(data.coverImgUrl); // 海报图片
+
+      setShareCount(data.shareCount);
+
+      setCommentCount(data.commentCount);
     })();
   }, [])
 
@@ -45,7 +59,7 @@ const Index: React.FC<IProps > = ({ history, location, match }) => {
     history.goBack();
   };
   return (
-    <div className={ styles.warpper } style={{ backgroundImage: 'url(http://t8.baidu.com/it/u=3571592872,3353494284&fm=79&app=86&f=JPEG?w=1200&h=1290)' }}>
+    <div className={ styles.warpper } style={{ backgroundImage: `url(${ coverImgUrl })` }}>
       <NavBar
         mode="light"
         icon={<Icon type="left" />}
@@ -57,17 +71,17 @@ const Index: React.FC<IProps > = ({ history, location, match }) => {
 
       {/* 榜单名称 */}
       <div className={ styles.rname }>
-        <p>飙升榜
+        <p>{ titleanme }
           <i>
             <img src={ Tsf } alt=""/>
           </i>
         </p>
-        <span>最近更新：1月13日</span>
+        <span>最近更新：{ updataTime }</span>
       </div>
 
       {/* 评论 分享 下载 多选 */}
       <div className={ styles.uls }>
-        <UlsCmp></UlsCmp>
+        <UlsCmp ></UlsCmp>
       </div>
     </div>
     
