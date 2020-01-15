@@ -6,7 +6,7 @@ import { useEffect } from 'react';
  */
 
 const Index = (pagtanme:string):void => {
-  console.log(pagtanme)
+  // console.log(pagtanme)
   
   useEffect(() => {
     const root = document.querySelector("#root");

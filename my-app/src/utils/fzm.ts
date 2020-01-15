@@ -30,58 +30,15 @@ const setCountType = (count:number):string => {
 };
 
 /**
- * 时间戳 --> 1月14日
+ * 将时间戳 --> 1月14日
  */
-const setData1 = (num:number) => {
+const setData1 = (num:number):string => {
   const date = new Date(num);
   let monthDate = date.getMonth() + 1;
   let dayDate = date.getDate();
   return `${monthDate}月${dayDate}日`
 };
 
-
-/**
- * 时间处理3
- * Fri Jul 05 2019 00:00:00 GMT+0800 (中国标准时间) 转成 2019-01-02
- * 
- * @param {*} func 
- * @param {*} isOther 是否处理时分秒 2019-01-02 06:02:03
- */
-// export const setDetailedDate = (str:number, isOther = false) => {
-//   // let newDate = '';
-//   let yearDate = str.getFullYear();
-
-//   let monthDate = str.getMonth() + 1;
-//   if(monthDate < 10) {
-//     monthDate = '0' + monthDate;
-//   }
-
-//   let dayDate = str.getDate();
-//   if(dayDate < 10) {
-//     dayDate = '0' + dayDate;
-//   }
-
-//   if(!isOther) {
-//     return `${yearDate}-${monthDate}-${dayDate}`;
-//   }
-  
-//   let hours = str.getHours();
-//   if(hours < 10) {
-//     hours = '0' + hours;
-//   }
-
-//   let minutes = str.getMinutes();
-//   if(minutes < 10) {
-//     minutes = '0' + minutes;
-//   }
-
-//   let seconds = str.getSeconds();
-//   if(seconds < 10) {
-//     seconds = '0' + seconds;
-//   }
-
-//   return `${yearDate}-${monthDate}-${dayDate} ${hours}:${minutes}:${seconds}`;
-// };
 
 export {
   setTextLength,
