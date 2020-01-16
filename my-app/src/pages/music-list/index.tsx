@@ -7,8 +7,6 @@ import useScrollTop from 'compontes/useScrollTop';
 
 import { getList  } from 'api/lists/index';
 
-// import styles from './index.module.css';
-
 interface IProps extends RouteComponentProps {
 
 }
@@ -31,7 +29,6 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
   const obj:IParams = match.params;
 
   useEffect(() => {
-    
     (async () => {
       const res = await getList(obj.id);
       console.log(res)
@@ -77,7 +74,6 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
       {/* 歌曲信息 */}
 
     </section>
-    
   )
 }
 
