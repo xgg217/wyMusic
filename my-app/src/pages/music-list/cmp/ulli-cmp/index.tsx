@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import styles from './index.module.css';
 import ly from 'assets/music-list/dx.svg';
@@ -6,10 +6,23 @@ import fx from 'assets/music-list/fx.svg';
 import xz from 'assets/music-list/xz.svg';
 import dx from 'assets/music-list/dxx.svg';
 
+import { setCountType } from 'utils/fzm';
+
 interface IProps {
+  shareCount:number; // 分享次数
+  commentCount:number // 评论次数
 }
 
-const Index: React.FC<IProps> = () => {
+const Index: React.FC<IProps> = ({ shareCount, commentCount }) => {
+
+  const strShareCount = useMemo(() => {
+    return setCountType(shareCount);
+  }, [shareCount]);
+
+  const strCommentCount = useMemo(() => {
+    return setCountType(commentCount);
+  }, [ commentCount ])
+
 
   return (
     <ul className={ styles.warpper }>
@@ -17,13 +30,13 @@ const Index: React.FC<IProps> = () => {
         <i>
           <img src={ ly } alt="留言"/>
         </i>
-        <p>16.5万</p>
+        <p>{ strCommentCount }</p>
       </li>
       <li>
         <i>
           <img src={ fx } alt="分享"/>
         </i>
-        <p>7755</p>
+        <p>{ strShareCount }</p>
       </li>
       <li>
         <i>
@@ -42,4 +55,4 @@ const Index: React.FC<IProps> = () => {
   )
 }
 
-export default Index
+export default React.memo(Index)

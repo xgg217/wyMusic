@@ -14,36 +14,3 @@
   left: 0;
   width: 100%;
 }
-
-.rname {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  color: #f6f6f7;
-}
-
-.rname p {
-  position: relative;
-  top: 0;
-  left: 0;
-  text-align: left;
-  font-size: 24px;
-  margin-bottom: 5px;
-  /* border: 1px solid red; */
-}
-
-.rname i {
-  position: absolute;
-  bottom: 0;
-  right: -20px;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  /* border: 1px solid red; */
-}
-.rname i img {
-  /* margin-top: -5px; */
-  max-width: 100%;
-  max-height: 100%;
-}
