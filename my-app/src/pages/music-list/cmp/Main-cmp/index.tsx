@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './index.module.css';
 
+import MuistListCmp from './../muist-list-cmp'
 import PlayImg from 'assets/list/play.svg'
 
 interface IProps {
@@ -23,6 +24,9 @@ const Index: React.FC<IProps > = () => {
           <p>收藏(32.2万)</p>
         </div>
       </div>
+
+      {/* 播放列表 */}
+      <MuistListCmp></MuistListCmp>
     </section>
   )
 }

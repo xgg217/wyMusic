@@ -4,7 +4,8 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   height: 10000px;
-  padding: 7.5px 7.5px 20px 20px;
+  /* padding: 7.5px 7.5px 20px 20px; */
+  overflow: hidden;
 }
 
 .head {
@@ -13,6 +14,7 @@
   justify-content: space-between;
   border: 1px solid #000;
   height: 50px;
+  padding: 7.5px 7.5px 7.5px 20px;
 }
 
 .head_left {
