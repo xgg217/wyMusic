@@ -5,6 +5,8 @@
   height: 50px;
   background-color: #db3f36;
   padding: 0 10px;
+  border: 1px solid #000;
+  /* width: 100vw; */
 }
 
 .menu,

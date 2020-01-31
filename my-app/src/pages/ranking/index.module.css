@@ -10,4 +10,10 @@
 
 .navs {
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* border: 1px solid #000; */
+  z-index: 100;
+  width: 100%;
 }

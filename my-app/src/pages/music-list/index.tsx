@@ -2,6 +2,7 @@ import React, { useState, useEffect }  from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { Toast } from 'antd-mobile';
 import HeadImgCmp from './cmp/imgbgc-cmp';
+import MainCmp from './cmp/Main-cmp';
 
 import useScrollTop from 'compontes/useScrollTop';
 
@@ -55,7 +56,6 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
 
   // 提示
   const toastClick = () => {
-    console.log(111)
     Toast.info(description, 2);
   }
 
@@ -72,6 +72,8 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
         toastClick={ toastClick }
         ></HeadImgCmp>
       {/* 歌曲信息 */}
+
+      <MainCmp></MainCmp>
 
     </section>
   )

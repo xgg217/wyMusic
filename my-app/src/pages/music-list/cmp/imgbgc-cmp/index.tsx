@@ -21,14 +21,17 @@ const Index: React.FC<IProps > = ({ titleanme, updataTime, coverImgUrl, shareCou
 
   return (
     <div className={ styles.warpper } style={{ backgroundImage: `url(${ coverImgUrl })` }}>
-      <NavBar
-        mode="light"
-        icon={<Icon type="left" />}
-        onLeftClick={ goNextPage }
-        rightContent={[
-          <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
-          <Icon key="1" type="ellipsis" />,
-        ]}></NavBar>
+      <div className={ styles.head }>
+        <NavBar
+          mode="light"
+          icon={<Icon type="left" />}
+          onLeftClick={ goNextPage }
+          rightContent={[
+            <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
+            <Icon key="1" type="ellipsis" />,
+          ]}></NavBar>
+      </div>
+      
 
       {/* 榜单名称 */}
       <TitleNameCmp name={ titleanme } updataTime={ updataTime } toastClick={ toastClick }></TitleNameCmp>

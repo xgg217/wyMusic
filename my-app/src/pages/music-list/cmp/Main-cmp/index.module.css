@@ -1,0 +1,55 @@
+.warpper {
+  border: 1px solid #000;
+  background-color: #f1f2ef;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 10000px;
+  padding: 7.5px 7.5px 20px 20px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #000;
+  height: 50px;
+}
+
+.head_left {
+  display: flex;
+  align-items: center;
+}
+
+.paay_all {
+  font-weight: bold;
+}
+.paay_all span {
+  color: #929292;
+}
+
+.head_right {
+  background-color: #ff3c3f;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 0 16px;
+  align-items: center;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.imgs {
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+  /* border: 1px solid #000; */
+}
+.imgs img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.head_right p:first-child {
+  margin-right: 5px;
+}
+
