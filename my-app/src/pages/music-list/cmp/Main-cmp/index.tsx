@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './index.module.css';
 
-import MuistListCmp from './../muist-list-cmp'
+// import MuistListCmp from './../muist-list-cmp'
 import MuistListLiCmp from './../muist-list-li-cmp'
 
 import PlayImg from 'assets/list/play.svg'
@@ -17,6 +17,16 @@ interface IProps {
 
 const Index: React.FC<IProps > = ({ subscribedCount, allCount }) => {
 
+  const IAllCountMap = allCount.map((item, index) => {
+    return (
+      <MuistListLiCmp
+        key={ item.id }
+        id={ item.id }
+        name={ item.name }
+        index={ index + 1 }
+        ></MuistListLiCmp>
+    )
+  })
   return (
     <section className={ styles.warpper }>
       <div className={ styles.head }>
@@ -34,7 +44,7 @@ const Index: React.FC<IProps > = ({ subscribedCount, allCount }) => {
 
       {/* 播放列表 */}
       <ul className={ styles.uls }>
-        <MuistListLiCmp></MuistListLiCmp>
+        {/* <MuistListLiCmp IAllCount={  }></MuistListLiCmp> */}
       </ul>
 
     </section>

@@ -1,21 +1,22 @@
 import React from 'react';
 
 import styles from './index.module.css';
+import { IAllCount } from './../../type';
 
 import UpImg from 'assets/list/up.svg'
 import VideoImg from 'assets/list/video.svg'
 import SelectsImg from 'assets/list/select.svg'
 
-interface IProps {
+interface IProps extends IAllCount {
 }
 
-const Index: React.FC<IProps > = () => {
+const Index: React.FC<IProps > = ({ id, index, name }) => {
 
   return (
     <li className={ styles.warpp }>
       <div className={ styles.left }>
         <div className={ styles.ind }>
-          <p>1</p>
+          <p>{ index }</p>
           <div className={ styles.qx }>
             <div className={ styles.imgs }>
               <img src={ UpImg } alt="排序"/>
