@@ -2,11 +2,12 @@ import React, { useState, useEffect }  from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { Toast } from 'antd-mobile';
 import HeadImgCmp from './cmp/imgbgc-cmp';
-import MainCmp from './cmp/Main-cmp';
+import MainCmp from './cmp/main-cmp';
 
 import useScrollTop from 'compontes/useScrollTop';
 
 import { getList  } from 'api/lists/index';
+import { IAllCount } from './type';
 
 interface IProps extends RouteComponentProps {
 
@@ -23,6 +24,9 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
   const [coverImgUrl, setCoverImgUrl] = useState<string>(''); // 海报图片
   const [shareCount, setShareCount] = useState<number>(0); // 分享次数
   const [commentCount, setCommentCount] = useState<number>(0); // 评论次数
+
+  const [subscribedCount, setSubscribedCount] = useState<number>(0)// 收藏次数
+  const [allCount, setAllCount] = useState<IAllCount[]>([])// 全部歌曲
 
   // 滚动条复原
   useScrollTop(location.pathname);
@@ -46,6 +50,11 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
       setShareCount(data.shareCount);
 
       setCommentCount(data.commentCount);
+
+      setSubscribedCount(data.subscribedCount);
+      console.log(data.subscribedCount)
+      console.log(data.tracks)
+      setAllCount(data.tracks);
     })();
   }, [obj.id]);
 
@@ -73,7 +82,10 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
         ></HeadImgCmp>
       {/* 歌曲信息 */}
 
-      <MainCmp></MainCmp>
+      <MainCmp
+        subscribedCount={ subscribedCount }
+        allCount={ allCount }
+        ></MainCmp>
 
     </section>
   )
