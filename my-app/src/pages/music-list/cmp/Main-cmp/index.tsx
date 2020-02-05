@@ -24,6 +24,10 @@ const Index: React.FC<IProps > = ({ subscribedCount, allCount }) => {
         id={ item.id }
         name={ item.name }
         index={ index + 1 }
+        ratio={ item.ratio }
+        ar={ item.ar }
+        al={ item.al }
+        alia={ item.alia }
         ></MuistListLiCmp>
     )
   })
@@ -34,7 +38,7 @@ const Index: React.FC<IProps > = ({ subscribedCount, allCount }) => {
           <div className={ styles.imgs }>
             <img src={ PlayImg } alt="播放"/>
           </div>
-  <p className={ styles.paay_all }>播放全部<span>(共{ allCount.length }首)</span></p>
+          <p className={ styles.paay_all }>播放全部<span>(共{ allCount.length }首)</span></p>
         </div>
         <div className={ styles.head_right }>
           <p>+</p>
@@ -45,6 +49,7 @@ const Index: React.FC<IProps > = ({ subscribedCount, allCount }) => {
       {/* 播放列表 */}
       <ul className={ styles.uls }>
         {/* <MuistListLiCmp IAllCount={  }></MuistListLiCmp> */}
+        { IAllCountMap }
       </ul>
 
     </section>

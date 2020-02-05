@@ -10,7 +10,7 @@ import SelectsImg from 'assets/list/select.svg'
 interface IProps extends IAllCount {
 }
 
-const Index: React.FC<IProps > = ({ id, index, name }) => {
+const Index: React.FC<IProps > = ({ id, index, name, ratio, ar, al, alia }) => {
 
   return (
     <li className={ styles.warpp }>
@@ -21,17 +21,17 @@ const Index: React.FC<IProps > = ({ id, index, name }) => {
             <div className={ styles.imgs }>
               <img src={ UpImg } alt="排序"/>
             </div>
-            <span>12%</span>
+            <span>{ ratio }%</span>
           </div>
         </div>
         <div className={ styles.name }>
           <div className={ styles.name_title }>
-            <p>目前士士</p>
-            <p className={ styles.name_clor }>(原夫)</p>
+            <p>{ name }</p>
+            <p className={ styles.name_clor }>{ alia }</p>
           </div>
           <div className={ styles.name_bot }>
-            <span>独家</span>
-            <span>SQ</span>
+            {/* <span>独家</span>
+            <span>SQ</span> */}
             <span className={ `${styles.name_clor} ${styles.max_nae}` }>李荣浩-麻雀大师傅地方的风格</span>
           </div>
         </div>

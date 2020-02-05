@@ -12,6 +12,17 @@ const setTextLength = (str:string, length:number = 20):string => {
 };
 
 /**
+ * 1个汉字等于两个英文长度的计算
+ * @param count 
+ */
+const getlength = (str:string):number => {
+  // return 1;
+  console.log(str)
+  // debugger
+  return str.replace(/[^/\x00-/xff]/ig, "aa").length;
+}
+
+/**
  * 数字设置
  * 当 数字 >= 5 出现单位 xxx万
  * 否则直接显示
@@ -42,6 +53,7 @@ const setData1 = (num:number):string => {
 
 export {
   setTextLength,
+  getlength,
   setCountType,
-  setData1
+  setData1,
 }

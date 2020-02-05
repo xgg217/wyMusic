@@ -8,6 +8,7 @@ import useScrollTop from 'compontes/useScrollTop';
 
 import { getList  } from 'api/lists/index';
 import { IAllCount } from './type';
+import { setTextLength, getlength } from 'utils/fzm'
 
 interface IProps extends RouteComponentProps {
 
@@ -54,7 +55,37 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
       setSubscribedCount(data.subscribedCount);
       console.log(data.subscribedCount)
       console.log(data.tracks)
-      setAllCount(data.tracks);
+      const newTracks:any[] = data.tracks;
+      // setAllCount(data.tracks);
+
+      const newTracksArr = newTracks.map((item, index) => {
+
+        // 歌唱者
+        const ar = item.ar.map((item:any) => {
+          return item.name
+        })
+
+        // const ar = ar.jion('/')
+        console.log(item.alia.join(' '))
+        // debugger
+        const alia = setTextLen(item.al.name, item.alia.join(' '), 7);
+        console.log(alia)
+
+        const name = setTextLength(item.name, 10);
+
+
+
+        return {
+          id: item.id,
+          name,
+          index,
+          ratio: data.trackIds[index].ratio || 0,
+          ar: ar.join('/'),
+          al: item.al.name,
+          alia,
+        };
+      });
+      setAllCount(newTracksArr);
     })();
   }, [obj.id]);
 
@@ -66,7 +97,33 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
   // 提示
   const toastClick = () => {
     Toast.info(description, 2);
-  }
+  };
+
+  // 判断字体个数，当超过出现省略号
+  const setTextLen = (str1:string, str2:string, len:number):string => {
+    // debugger
+    const str1Len = getlength(str1);
+    // debugger
+    const str2Len = getlength(str2);
+    // 歌曲名字太长
+    if(str1Len > len) {
+      return '';
+    }
+
+    // 没有原唱
+    if(str2Len === 0) {
+      return ''
+    }
+
+    //
+    const textLen = str1Len + str2Len;
+    if(textLen <= len) {
+      // 不出出现省略号
+      return `(${str2})`;
+    }
+
+    return `(${setTextLength(str2, (len - textLen))})`;
+  };
 
   return (
     <section>
