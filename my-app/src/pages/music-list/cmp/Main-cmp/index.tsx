@@ -56,4 +56,4 @@ const Index: React.FC<IProps > = ({ subscribedCount, allCount }) => {
   )
 }
 
-export default Index
+export default Index;
