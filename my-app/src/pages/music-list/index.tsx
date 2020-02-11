@@ -53,8 +53,6 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
       setCommentCount(data.commentCount);
 
       setSubscribedCount(data.subscribedCount);
-      console.log(data.subscribedCount)
-      console.log(data.tracks)
       const newTracks:any[] = data.tracks;
       // setAllCount(data.tracks);
 
@@ -63,18 +61,12 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
         // 歌唱者
         const ar = item.ar.map((item:any) => {
           return item.name
-        })
+        });
 
-        // console.log(item.alia.join(' '))
-        // debugger
-        // 原唱
-        // const alia = setTextLen(item.al.name, item.alia.join(' '), 14);
-        // console.log(alia)
-
+        // 歌曲名字
         const name = beautySub(item.name, 13);
-        console.log(name)
-
-
+        // 歌曲原唱
+        const alia = setAliaText(name, item.alia.join(' '), 16);
 
         return {
           id: item.id,
@@ -83,7 +75,7 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
           ratio: data.trackIds[index].ratio || 0,
           ar: ar.join('/'),
           al: item.al.name,
-          alia: '',
+          alia,
         };
       });
       setAllCount(newTracksArr);
@@ -100,35 +92,32 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
     Toast.info(description, 2);
   };
 
-  // 判断字体个数，当超过出现省略号
-  const setTextLen = (str1:string, str2:string, len:number):string => {
-    // debugger
-    
-    const str1Len = getlength(str1);
-    // debugger
-    const str2Len = getlength(str2);
-    const textLen = str1Len + str2Len;
-    console.log(`${str1}+++++${str2}++${str1Len}++${textLen}`)
-    // 歌曲名字太长
-    if(str1Len > len) {
+  /**
+   * 返回歌曲原唱
+   * @param name 歌曲名字
+   * @param alia 歌曲原唱
+   * @param len  歌曲名字 + 歌曲原唱 最大字长度
+   */
+  const setAliaText = (name:string, alia:string, len:number):string => {
+    // 歌曲名字已经出现了 省略号
+    if(name.includes('...')) {
       return '';
     }
 
     // 没有原唱
-    if(str2Len === 0) {
-      return ''
-    }
-    // const textLen = str1Len + str2Len;
-    // console.log(textLen)
-    // console.log(len)
-    // debugger
-    if(textLen <= len) {
-      // 不出出现省略号
-      return `(${str2})`;
+    if(!alia.length) {
+      return '';
     }
 
-    // console.log(`(${setTextLength(str2, (textLen - len - 2))})12`)
-    return `(${beautySub(str2, (len - str1Len - 1))})`;
+    // 原唱 + 歌曲名字 在容器中可以一起存在
+    const nameLen = getlength(name);
+    const aliaLen = getlength(alia); // 原唱长度
+    if ((len - nameLen) >= aliaLen) {
+      console.log(alia)
+      return `(${alia})`
+    } else {
+      return `(${beautySub(name, (len - nameLen - 4))}`;
+    }
   };
 
   return (

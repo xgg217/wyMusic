@@ -32,7 +32,7 @@ const Index: React.FC<IProps > = ({ id, index, name, ratio, ar, al, alia }) => {
           <div className={ styles.name_bot }>
             {/* <span>独家</span>
             <span>SQ</span> */}
-            <span className={ `${styles.name_clor} ${styles.max_nae}` }>李荣浩-麻雀大师傅地方的风格</span>
+            <span className={ `${styles.name_clor} ${styles.max_nae}` }>{ ar }-{ al }</span>
           </div>
         </div>
       </div>
