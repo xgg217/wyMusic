@@ -8,8 +8,8 @@ const Index: React.FC = () => {
 
   return (
     <section>
-      {/* <Footer></Footer> */}
-      <Play></Play>
+      <Footer></Footer>
+      {/* <Play></Play> */}
     </section>
   )
 }
