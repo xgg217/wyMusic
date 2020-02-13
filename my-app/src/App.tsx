@@ -8,10 +8,12 @@ import {
 
 const Ranking = lazy(() => import('pages/ranking')); // 排行榜
 const MusicList = lazy(() => import('pages/music-list')); // 榜单列表
+const PlayPages = lazy(() => import('pages/play')); // 榜单列表
 
 const Index = lazy(() => import('pages/index'));
 // const Find = lazy(() => import('pages/find'));
-const Footer = lazy(() => import('pages/footer'));
+const Plays = lazy(() => import('pages/plays'));
+// const Footer = lazy(() => import('pages/play'));
 
 const App: React.FC = () => {
   return (
@@ -23,12 +25,15 @@ const App: React.FC = () => {
               <Route path='/index' component={ Index }></Route>
               <Route path="/ranking" component={ Ranking }></Route>
               <Route path="/list/:id" component={ MusicList }></Route>
+              <Route path="/play" component={ PlayPages }></Route>
               {/* <Route path='/find' component={ Find }></Route> */}
               <Redirect to='/index/index'></Redirect>
             </Switch>
+            
           </main>
           <footer className="footer">
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
+            <Plays></Plays>
           </footer>
         </div>
       </Suspense>

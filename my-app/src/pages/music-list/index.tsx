@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from 'react';
+import React, { memo, useState, useEffect }  from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { Toast } from 'antd-mobile';
 import HeadImgCmp from './cmp/imgbgc-cmp';
@@ -143,4 +143,4 @@ const Index: React.FC<IProps> = ({ history, location, match }) => {
   )
 }
 
-export default withRouter(Index)
+export default withRouter(memo(Index));
