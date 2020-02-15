@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import styles from './index.module.css';
 
@@ -6,7 +6,7 @@ const Index: React.FC = () => {
 
   return (
     <div className={ styles.warpp }>
-      123
+      进度条
     </div>
   )
 }

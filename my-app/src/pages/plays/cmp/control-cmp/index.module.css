@@ -1,0 +1,42 @@
+.warpp {
+  padding: 0 45px;
+  background-color: rgb(29, 28, 28);
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #000;
+}
+.box li {
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box li img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.box li:nth-child(1) {
+  width: 30px;
+  height: 30px;
+}
+
+.box li:nth-child(2),
+.box li:nth-child(4) {
+  width: 22px;
+  height: 28px;
+}
+
+.box li:nth-child(3) {
+  width: 72px;
+  height: 72px;
+}
+
+.box li:nth-child(5) {
+  width: 27px;
+  height: 28px;
+}

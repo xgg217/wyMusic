@@ -4,7 +4,8 @@ import { SETPLAYSTATE } from 'store/action/PlayStateAction';
  * full 全屏
  * no-full 不是全屏
  */
-const initialState = 'no-full';
+// const initialState = 'no-full';
+const initialState = 'full';
 
 interface ActionType {
   type:Symbol;
