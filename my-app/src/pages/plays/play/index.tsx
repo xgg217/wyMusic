@@ -6,7 +6,7 @@ const Index: React.FC = () => {
 
   return (
     <div className={ styles.warpp }>
-      111
+      播放页面
     </div>
   )
 }

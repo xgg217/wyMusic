@@ -7,6 +7,6 @@ export const SETPLAYSTATE = Symbol('set-play-state');
 export function createSetLoginUserAction(state:string) {
   return {
     type: SETPLAYSTATE,
-    playload: state
+    payload: state
   }
 }

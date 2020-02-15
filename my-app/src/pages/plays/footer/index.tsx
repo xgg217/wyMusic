@@ -5,16 +5,13 @@ import styles from './index.module.css';
 // import listimg from 'assets/footer/list.svg';
 import palyimg from 'assets/footer/paly.svg';
 import ztimg from 'assets/footer/zt.svg';
+import CD from 'assets/footer/CD.svg'
 
-interface IProps extends RouteComponentProps {}
+interface IProps extends RouteComponentProps {
+  goPlayPage:()=>void
+}
 
-const Index: React.FC<IProps> = ({ history  }) => {
-
-  // 进入播放页面
-  const goPlayPage = () => {
-    // history.push('/play');
-    console.log('进入播放页面');
-  };
+const Index: React.FC<IProps> = ({ history, goPlayPage  }) => {
 
   // 播放/暂停
   const onPlayEvent = () => {
@@ -30,7 +27,7 @@ const Index: React.FC<IProps> = ({ history  }) => {
     <section className={ styles.warpp } >
       <div className={ styles.left } onClick={ goPlayPage }>
         <div className={ styles.imgs }>
-          <img className={ styles.img } src="" alt="专辑"/>
+          <img className={ styles.img } src={ CD } alt="专辑"/>
         </div>
         <div className={ styles.content }>
           <h4>标士大夫十分士大夫大师傅士大夫第三方士大夫士大夫题</h4>

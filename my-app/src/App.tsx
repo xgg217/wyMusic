@@ -16,6 +16,7 @@ const Index = lazy(() => import('pages/index'));
 const Plays = lazy(() => import('pages/plays'));
 
 const App: React.FC = () => {
+
   return (
     <Provider store={ stors }>
       <Router>
