@@ -1,16 +1,17 @@
 .warpp {
   padding: 0 45px;
-  background-color: rgb(29, 28, 28);
+  /* background-color: rgb(29, 28, 28); */
+  height: 75px;
 }
 
 .box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 .box li {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   display: flex;
   align-items: center;
   justify-content: center;

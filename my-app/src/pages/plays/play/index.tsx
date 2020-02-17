@@ -13,22 +13,24 @@ const Index: React.FC = () => {
   return (
     <Suspense fallback={ null }>
       <div className={ styles.warpp }>
-        <div className={ styles.head }>
-          <HeadCmp></HeadCmp>
-        </div>
         <div className={ styles.box }>
+          {/* 头部 */}
+          <HeadCmp></HeadCmp>
+
+          {/* 歌词 专辑图片显示 */}
           <BoxCmp></BoxCmp>
-        </div>
-        <div className={ styles.operation }>
+
+          {/* 收藏等操作 */}
           <OperationCmp></OperationCmp>
-        </div>
-        <div className={ styles.progress }>
+
+          {/* 进度条 */}
           <ProgressCmp></ProgressCmp>
-        </div>
-        <div className={ styles.control }>
+
+          {/* 歌曲控制 */}
           <ControlCmp></ControlCmp>
         </div>
       </div>
+      
     </Suspense>
     
   )

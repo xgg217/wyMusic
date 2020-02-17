@@ -1,0 +1,62 @@
+.warpp {
+  height: 50px;
+  border: 1px solid red;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.imgs {
+  width: 23px;
+  height: 23px;
+  margin-right: 20px;
+  border: 1px solid #000;
+}
+
+.txt {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.txt p:first-child {
+  /* font-size: 14px; */
+  color: #fff;
+  /* width: 60vw; */
+  border: 1px solid red;
+  
+  /* text-overflow:ellipsis;
+  white-space: nowrap; */
+  font-size: 16px;
+}
+.txt p:last-child {
+  margin-top: 5px;
+  font-size: 10px;
+  color: #707b80;
+}
+
+.rig {
+  border: 1px solid red;
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+
+

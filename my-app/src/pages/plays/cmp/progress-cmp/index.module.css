@@ -1,0 +1,16 @@
+.warpp {
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: rgba(0, 0, 0, 0.486); */
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.progress {
+  width: 70%;
+  /* border: 1px solid red; */
+  overflow: hidden;
+  border-radius: 4px;
+}
