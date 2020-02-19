@@ -6,7 +6,6 @@
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-
 }
 img {
   max-width: 100%;
@@ -22,7 +21,7 @@ img {
   width: 23px;
   height: 23px;
   margin-right: 20px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 
 .txt {
@@ -31,26 +30,45 @@ img {
   width: 60vw;
   border: 1px solid #000;
   overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 40px;
+}
+.txt p {
+  position: absolute;
+  left: 0;
 }
 
 .txt p:first-child {
-  /* font-size: 14px; */
+  width: auto;
+  top: 0;
   color: #fff;
-  /* width: 60vw; */
+  font-size: 18px;
   border: 1px solid red;
-  
-  /* text-overflow:ellipsis;
-  white-space: nowrap; */
-  font-size: 16px;
+  /* animation: myfirst 5s; */
+  /* animation-name: myfirst;
+  animation-iteration-count: infinite;
+  animation-play-state: paused; */
+  /* transform: translateX(-0%); */
+  /* transform: translate(20px, 0, 0); */
 }
+/* @keyframes myfirst {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+} */
 .txt p:last-child {
+  bottom: 0;
   margin-top: 5px;
   font-size: 10px;
   color: #707b80;
 }
 
 .rig {
-  border: 1px solid red;
   width: 30px;
   height: 30px;
 }
